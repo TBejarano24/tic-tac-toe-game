@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
+    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./output.css">
 </head>
 
@@ -21,7 +22,7 @@
                     <circle cx="50" cy="50" r="35" stroke="#f0b137" stroke-width="30" />
                 </svg>
             </div>
-            <div
+            <div id="turnIndicator"
                 class="bg-[#1f3540] h-[30px] w-[85px] rounded-sm shadow-[0px_4px_#102129] flex justify-center items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                     stroke="#a8bec9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
@@ -42,74 +43,49 @@
             </svg>
         </div>
     </header>
-    <main class="h-[490px] max-w-[320px] mx-auto">
+    <main id="tic-tac-toe-grid" class="h-[490px] max-w-[320px] mx-auto">
         <div class="grid grid-cols-3 grid-rows-4 h-[400px] items-center justify-items-center m-1.5 mt-5">
-            <div class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129]"></div>
             <div
-                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="#31c4be" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="4" x2="20" y2="20" />
-                    <line x1="20" y1="4" x2="4" y2="20" />
-                </svg>
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
             </div>
             <div
-                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="35" stroke="#f0b137" stroke-width="30" />
-                </svg>
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
             </div>
             <div
-                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="#31c4be" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="4" x2="20" y2="20" />
-                    <line x1="20" y1="4" x2="4" y2="20" />
-                </svg>
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
             </div>
             <div
-                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="35" stroke="#f0b137" stroke-width="30" />
-                </svg>
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
             </div>
             <div
-                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="#31c4be" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="4" x2="20" y2="20" />
-                    <line x1="20" y1="4" x2="4" y2="20" />
-                </svg>
-            </div>
-            <div class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129]"></div>
-            <div
-                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="35" stroke="#f0b137" stroke-width="30" />
-                </svg>
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
             </div>
             <div
-                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="#31c4be" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="4" x2="20" y2="20" />
-                    <line x1="20" y1="4" x2="4" y2="20" />
-                </svg>
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
+            </div>
+            <div
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
+            </div>
+            <div
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
+            </div>
+            <div
+                class="bg-[#1f3540] h-[80px] w-[85px] rounded-xl shadow-[0px_7px_#102129] flex justify-center items-center grid-square">
             </div>
             <div
                 class="bg-[#31c4be] h-[60px] w-[85px] rounded-xl self-start mt-2.5 flex flex-col justify-center items-center">
-                <span class="text-[#1f3540] text-xs"><strong>X (YOU)</strong></span>
-                <span class="text-[#1f3540] text-xl"><strong>14</strong></span>
+                <span class="text-[#1f3540] text-xs"><strong>X (P1)</strong></span>
+                <span class="text-[#1f3540] text-xl"><strong>0</strong></span>
             </div>
             <div
                 class="bg-[#a8bec9] h-[60px] w-[85px] rounded-xl self-start mt-2.5 flex flex-col justify-center items-center">
                 <span class="text-[#1f3540] text-xs"><strong>TIES</strong></span>
-                <span class="text-[#1f3540] text-xl"><strong>32</strong></span>
+                <span class="text-[#1f3540] text-xl"><strong>0</strong></span>
             </div>
             <div
                 class="bg-[#f0b137] h-[60px] w-[85px] rounded-xl self-start mt-2.5 flex flex-col justify-center items-center">
-                <span class="text-[#1f3540] text-xs"><strong>O (CPU)</strong></span>
-                <span class="text-[#1f3540] text-xl"><strong>11</strong></span>
+                <span class="text-[#1f3540] text-xs"><strong>O (P2)</strong></span>
+                <span class="text-[#1f3540] text-xl"><strong>0</strong></span>
             </div>
         </div>
     </main>
